@@ -22,7 +22,11 @@ $(document).ready(function() {
 		$('#intro .item').css({'height':($(window).height())+'px'});
 		});
 	});
-
+/*  Collapse menu on click on mobile and tablet devices */
+	if ($('.navbar-toggle:visible').length) {
+		$('.navbar a').click(function () { $(".navbar-collapse").collapse("hide") });
+	}
+/*  Others */
 	$.localScroll({
 		offset: -60,
 	});
